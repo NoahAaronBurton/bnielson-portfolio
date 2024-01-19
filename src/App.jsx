@@ -79,35 +79,32 @@ function App() {
     )
   }
 
+  const Projects = () => {
+    return (
+      <div className='flex flex-col'>
+          <Card title='Title' description='Description' image={jazz} />
+          <Card title='Title' description='Description' image={jazz} />
+        </div>
+    )
+  }
+
+  const Services = () => {
+    return (
+      <div className='flex flex-col'>
+
+        <Card title='Title' description='Description' image={jazz} />
+        <Card title='Title' description='Description' image={jazz} />
+      </div>
+        
+    )
+  }
+
   return (
   <div className='flex flex-col min-h-screen flex-wrap pt-5 w-full lg:px-[150px] lg:py-[50px] '>
       <Header />
 
-      <Section title='About Me'>
-        <AboutMe />
-      </Section>
 
-      <Section title='My Music'>
-        <Music />
-      </Section>
-      
-      <Section title='My Work'>
-        <div className='flex flex-col'>
-          <Card title='Title' description='Description' image={jazz} />
-          <Card title='Title' description='Description' image={jazz} />
-          <Card title='Title' description='Description' image={jazz} />
-          <Card title='Title' description='Description' image={jazz} />
-        </div>
-      </Section>
 
-      <Section title='Services'>
-        <Card title='Title' description='Description' image={jazz} />
-        <Card title='Title' description='Description' image={jazz} />
-      </Section>
-
-      <Section title='Contact Me'>
-        <Contact />
-      </Section>
   </div>
   )
 }
