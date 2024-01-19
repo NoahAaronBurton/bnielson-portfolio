@@ -8,7 +8,7 @@ function Music() {
 
     // Fetches data from the server
     useEffect(() => {
-    fetch('https://brendon-port-server-production.up.railway.app/api/dvddy') //! change to deplayed server url in production
+    fetch('https://my-spotify-server-production.up.railway.app/api/dvddy') //! change to deplayed server url in production
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
