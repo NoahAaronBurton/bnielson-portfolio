@@ -75,17 +75,14 @@ function App() {
           <h1 className='text-6xl text-balance font-bold'>Brendon Nielson</h1>
           <h2 className='text-4xl text-balance'>Commercial Audio Specialist</h2>
         </div>
-      <div className='w-full h-6 bg-gradient-to-r from-green-600 to-green-300'>
-        <div className='text-center w-full'>Book Me</div>
-      </div>
       </div>
     )
   }
 
   return (
   <div className='flex flex-col min-h-screen flex-wrap pt-5 w-full'>
-        <Header />
-      
+      <Header />
+
       <Section title='About Me'>
         <AboutMe />
       </Section>
