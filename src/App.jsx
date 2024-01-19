@@ -26,40 +26,9 @@ function App() {
     )
   }
 
-  return (
-  <div className='flex flex-col min-h-screen flex-wrap pt-5 w-full'>
-        <div className='w-auto'>
-          <h1 className='text-6xl text-balance font-bold'>Brendon Nielson</h1>
-          <h2 className='text-4xl text-balance'>Commerical Audio Specialist</h2>
-        </div>
-      <div className='w-full h-6 bg-gradient-to-r from-green-600 to-green-300'>
-        <div className='text-center w-full'>Book Me</div>
-      </div>
-      
-      <Section title='About Me'>
-        <AboutMe />
-      </Section>
-
-      <Section title='My Music'>
-        <Music />
-      </Section>
-      
-      <Section title='My Work'>
-        <div className='flex flex-col'>
-          <Card title='Title' description='Description' image={jazz} />
-          <Card title='Title' description='Description' image={jazz} />
-          <Card title='Title' description='Description' image={jazz} />
-          <Card title='Title' description='Description' image={jazz} />
-        </div>
-      </Section>
-
-      <Section title='Services'>
-        <Card title='Title' description='Description' image={jazz} />
-        <Card title='Title' description='Description' image={jazz} />
-      </Section>
-
-      <Section title='Contact Me'>
-        <div className='flex flex-col md:flex-row'>
+  const Contact = () => {
+    return (
+      <div className='flex flex-col md:flex-row'>
           <div className='flex flex-col w-full md:w-1/2 mb-4 justify-between'>
             <p className='mr-6'>While JavaScript is never required for Netlify Forms, you can use JavaScript to submit forms with AJAX/XHR if you’d like. That makes Netlify Forms a great companion to sites powered by Vue, React, or other modern frameworks.</p>
             <div className='flex flex-row w-auto justify-items-end mt-4 md:mt-0' >
@@ -97,6 +66,51 @@ function App() {
               </form>
             </div>
         </div>
+    )
+  }
+
+  const Header = () => {
+    return (
+      <div className='container w-full'>
+        <div className='w-auto'>
+          <h1 className='text-6xl text-balance font-bold'>Brendon Nielson</h1>
+          <h2 className='text-4xl text-balance'>Commerical Audio Specialist</h2>
+        </div>
+      <div className='w-full h-6 bg-gradient-to-r from-green-600 to-green-300'>
+        <div className='text-center w-full'>Book Me</div>
+      </div>
+      </div>
+    )
+  }
+
+  return (
+  <div className='flex flex-col min-h-screen flex-wrap pt-5 w-full'>
+        <Header />
+      
+      <Section title='About Me'>
+        <AboutMe />
+      </Section>
+
+      <Section title='My Music'>
+        <Music />
+      </Section>
+      
+      <Section title='My Work'>
+        <div className='flex flex-col'>
+          <Card title='Title' description='Description' image={jazz} />
+          <Card title='Title' description='Description' image={jazz} />
+          <Card title='Title' description='Description' image={jazz} />
+          <Card title='Title' description='Description' image={jazz} />
+        </div>
+      </Section>
+
+      <Section title='Services'>
+        <Card title='Title' description='Description' image={jazz} />
+        <Card title='Title' description='Description' image={jazz} />
+      </Section>
+
+      <Section title='Contact Me'>
+        <Contact />
       </Section>
   </div>
   )
