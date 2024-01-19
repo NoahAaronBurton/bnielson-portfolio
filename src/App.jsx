@@ -1,4 +1,3 @@
-import Nav from './components/Nav'
 import Section from './components/Section'
 import Music from './components/Music'
 import Card from './components/Card'
@@ -6,7 +5,7 @@ import Card from './components/Card'
 import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
-import profilePic from './assets/profile-pic.png'
+
 import jazz from './assets/jazz.png'
 
 import './App.css'
@@ -74,7 +73,7 @@ function App() {
       <div className='container w-full'>
         <div className='w-auto'>
           <h1 className='text-6xl text-balance font-bold'>Brendon Nielson</h1>
-          <h2 className='text-4xl text-balance'>Commerical Audio Specialist</h2>
+          <h2 className='text-4xl text-balance'>Commercial Audio Specialist</h2>
         </div>
       <div className='w-full h-6 bg-gradient-to-r from-green-600 to-green-300'>
         <div className='text-center w-full'>Book Me</div>
