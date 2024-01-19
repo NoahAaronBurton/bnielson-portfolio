@@ -70,17 +70,17 @@ function App() {
 
   const Header = () => {
     return (
-      <div className='container w-full'>
+      <div className='container w-full mb-10'>
         <div className='w-auto'>
-          <h1 className='text-6xl text-balance font-bold'>Brendon Nielson</h1>
-          <h2 className='text-4xl text-balance'>Commercial Audio Specialist</h2>
+          <h1 className='text-6xl text-nowrap font-bold'>Brendon Nielson</h1>
+          <h2 className='text-4xl text-nowrap'>Commercial Audio Specialist</h2>
         </div>
       </div>
     )
   }
 
   return (
-  <div className='flex flex-col min-h-screen flex-wrap pt-5 w-full'>
+  <div className='flex flex-col min-h-screen flex-wrap pt-5 w-full lg:px-[150px] lg:py-[50px] '>
       <Header />
 
       <Section title='About Me'>
