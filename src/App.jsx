@@ -29,11 +29,7 @@ const Contact = () => {
     <div className='flex flex-col md:flex-row'>
         <div className='flex flex-col w-full md:w-1/2 mb-4 justify-between'>
           <p className='mr-6'>While JavaScript is never required for Netlify Forms, you can use JavaScript to submit forms with AJAX/XHR if you’d like. That makes Netlify Forms a great companion to sites powered by Vue, React, or other modern frameworks.</p>
-          <div className='flex flex-row w-auto justify-items-end mt-4 md:mt-0' >
-            <a href=""><FaInstagram className='mr-1' size={'32'}/></a>
-            <a href=""><FaXTwitter className='mr-1' size={'32'} /></a>
-            <a href=""><FaLinkedinIn className='mr-1' size={'32'} /></a>
-          </div>
+          
         </div>
           <div className='w-full md:w-1/2'>
             <form name="contact" method="post" className="w-full max-w-lg mx-auto">
@@ -69,10 +65,10 @@ const Contact = () => {
 
 const Header = () => {
   return (
-    <div className='container w-full mb-10'>
+    <div className='container w-full  lg:mb-5'>
       <div className='w-auto'>
         <h1 className='text-6xl text-nowrap font-bold'>Brendon Nielson</h1>
-        <h2 className='text-4xl text-nowrap'>Commercial Audio Specialist</h2>
+        <h2 className='text-2xl text-nowrap'>Commercial Audio Specialist</h2>
       </div>
     </div>
   )
@@ -98,6 +94,15 @@ const Services = () => {
   )
 }
 
+const Socials = () => {
+  return (
+    <div className='flex flex-row w-auto justify-items-end mt-4 md:mt-0' >
+            <a href=""><FaInstagram className='mr-1' size={'32'}/></a>
+            <a href=""><FaXTwitter className='mr-1' size={'32'} /></a>
+            <a href=""><FaLinkedinIn className='mr-1' size={'32'} /></a>
+    </div>
+  )
+}
 
 const sections = [
   {
@@ -136,7 +141,7 @@ const activeComponent = sections[activeSection].component;
       <button
         key={index}
         onClick={() => setActiveSection(index)}
-        className={`p-4 ${activeSection === index ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'}`}
+        className={`p-2 align-start ${activeSection === index ? 'text-xl text-gray-900'  : ' text-gray-500'}`}
       >
         {section.title}
       </button>);  
@@ -148,17 +153,14 @@ const activeComponent = sections[activeSection].component;
   return (
     <div className='flex flex-col min-h-screen flex-wrap pt-5 w-full lg:px-[150px] lg:py-[50px] '>
       <Header />
-    {/* 2.  Render the menu items here */}
-      <div className='flex flex-row flex-wrap justify-between'>
-        <div className='flex flex-col w-full lg:w-1/4'>
+      <div className='flex flex-col lg:flex-row flex-wrap justify-between'>
+        <div className='flex lg:flex-col w-full lg:w-1/4'>
           {renderMenuItems()}
         </div>
         <div className='flex flex-col w-full lg:w-3/4'>
-          {/* 3.  Render the active section here */}
           {activeComponent}
         </div>
       </div>
-    
     </div>
   )
 }
