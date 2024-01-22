@@ -121,10 +121,27 @@ const sections = [
     component: <Contact />
   }
 ]
-function App() {
-  const [activeSection, setActiveSection] = useState(sections[0].id)
 
+
+function App() {
+  const [activeSection, setActiveSection] = useState(0) // About Me is the default active section
+
+  // Find the active section
+const activeComponent = sections[activeSection].component;
+  
   // 1.  For each section in the sections array, create a menu item. When a menu item is clicked, it should update activeSection to its corresponding section id
+  function renderMenuItems() {
+    return sections.map((section, index) => {
+      return(
+      <button
+        key={index}
+        onClick={() => setActiveSection(index)}
+        className={`p-4 ${activeSection === index ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'}`}
+      >
+        {section.title}
+      </button>);  
+    })
+  }
 
 
 
@@ -134,11 +151,11 @@ function App() {
     {/* 2.  Render the menu items here */}
       <div className='flex flex-row flex-wrap justify-between'>
         <div className='flex flex-col w-full lg:w-1/4'>
-          
+          {renderMenuItems()}
         </div>
         <div className='flex flex-col w-full lg:w-3/4'>
           {/* 3.  Render the active section here */}
-
+          {activeComponent}
         </div>
       </div>
     
